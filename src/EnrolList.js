@@ -39,17 +39,18 @@ const columns = [
 
 // Change items by elements introduces in other component
 const  items = [];
-for (let i = 1; i < 5; i++) {
-  items.push({
-    key: i,
-    fname: "FirstName " + i,
-    lname: "LastName " + i,
-    program: "UG",
-    email: "Email " + i,
-  });
-}
+//for (let i = 1; i < 5; i++) {
+//  items.push({
+//    key: i,
+//    fname: "FirstName " + i,
+//    lname: "LastName " + i,
+//    program: "UG",
+//    email: "Email " + i,
+//  });
+//}
 
-const EnrolList = () => {
+const EnrolList = (Users) => {
+  
   return (
     <div className="enrolList">
       <DetailsList items={items} columns={columns} />
