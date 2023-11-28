@@ -29,6 +29,7 @@ function App() {
 
   return (
     <div className='App'>
+    //Faltan las props
       <Formulario ChangeInput={handleAddUser} Value={value} ClickButton={AddList}/>
       <hr/>
       <EnrolList Users={users}/>
