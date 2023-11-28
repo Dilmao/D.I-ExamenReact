@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import EnrolList from './EnrolList';
 import Formulario from './Form/Formulario';
+//Faltan las props
 
 const initialUser = [ 
   { id: 1, fname: "Diego",  lname: "Lacasa", program: "UG", email: "Diego@gmail"}
@@ -29,7 +30,6 @@ function App() {
 
   return (
     <div className='App'>
-    //Faltan las props
       <Formulario ChangeInput={handleAddUser} Value={value} ClickButton={AddList}/>
       <hr/>
       <EnrolList Users={users}/>
