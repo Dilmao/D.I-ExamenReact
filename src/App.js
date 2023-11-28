@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './Login';
 
@@ -7,7 +6,6 @@ function App() {
     <div className="App">
       <h1>SignIn - SignUp - SignOut</h1>
         <Login />
-      
     </div>
   );
 }
