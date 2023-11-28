@@ -3,19 +3,20 @@ import { useCallback, useEffect, useState } from "react"
 import React from 'react'
 
 const Fomrulario = (props) => {
-
+    //Variables del formulario
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [email, setEmail] = useState("UG")
     const [programa, setPrograma] = useState("UG")
-
+    //Variables para mensajes de error
     const [mensajeNombre, setMensajeNombre] = useState("")
     const [mensajeApellido, setMensajeApellido] = useState("")
     const [mensajeEmail, setMensajeEmail] = useState("")
-
+    //Variable del boton
     const [botonClickable, setBotonClickable] = useState(false)
 
 
+    // Se validan que los datos introducidos en nombre sean validos
     function handleValidateNombre(event) {
         let enteredNombre = event.target.value
         setNombre(enteredNombre)
@@ -28,6 +29,7 @@ const Fomrulario = (props) => {
         }
     }
 
+    // Se validan que los datos introducidos en apellido sean validos
     function handleValidateApellido(event) {
         let enteredApellido = event.target.value
         setApellido(enteredApellido)
@@ -40,6 +42,7 @@ const Fomrulario = (props) => {
         }
     }
 
+    // Se validan que los datos introducidos en email sean validos
     function handleValidateEmail(event) {
         let enteredEmail = event.target.value
         setEmail(enteredEmail)
@@ -54,10 +57,12 @@ const Fomrulario = (props) => {
         }
     }
 
+    // No es necesario validar el programa
     function handleValidatePrograma(event) {
         setPrograma(event.target.value)
     }
 
+    // Validaciones para saber si permitir pulsar el boton
     const handleValidateAll = useCallback(() => {
         if 
         (
@@ -86,6 +91,7 @@ const Fomrulario = (props) => {
         console.log(data)
     }
 
+    //Formulario
     return (
         <form className='Form' onSubmit = {handleSubmit}>
             <div>
